@@ -1,0 +1,106 @@
+.country__checkbox {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 55px;
+    display: inline-block;
+
+    &:nth-child(10) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      @include pseudo-elem;
+      width: 42px;
+      height: 24px;
+      background-color: #bdbdbd;
+      border-radius: 12px;
+      left: -55px;
+    }
+
+    &::after {
+      @include pseudo-elem;
+      width: 20px;
+      height: 20px;
+      background-color: $base-white;
+      border-radius: 50%;
+      top: 2px;
+      left: -53px;
+    }
+  }
+
+  input {
+    &:disabled:checked + label::after {
+      background-color: #bdbdbd;
+      left: -35px;
+    }
+
+    &:disabled:checked + label::before {
+      background-color: #e2e2e2;
+    }
+
+    &:disabled:checked + label {
+      color: $base-grey;
+    }
+
+    &:disabled + label::after {
+      background-color: #f8f8f8;
+    }
+
+    &:disabled + label::before {
+      background-color: #e2e2e2;
+    }
+
+    &:disabled + label {
+      color: $base-grey;
+    }
+
+    &:checked + label::after {
+      display: block;
+      left: -35px;
+    }
+
+    &:checked + label::before {
+      background-color: #7859cf;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include not-hover;
+
+      &:hover + label::before {
+        @include hover;
+        border: 2px solid #9070ec;
+        background-color: rgba(144, 112, 236, 0.25);
+      }
+
+      &:hover + label::after {
+        @include hover;
+        background-color: $base-white;
+      }
+
+      &:hover:checked + label::after {
+        @include hover;
+        left: -53px;
+      }
+
+      &:focus + label::before {
+        @include hover;
+        border: 2px solid #9070ec;
+        background-color: rgba(144, 112, 236, 0.25);
+      }
+
+      &:focus + label::after {
+        @include hover;
+        background-color: $base-white;
+      }
+
+      &:focus:checked + label::after {
+        @include hover;
+        left: -53px;
+      }
+    }
+  }
+}

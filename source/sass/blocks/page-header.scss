@@ -1,0 +1,162 @@
+.page-header {
+  @include font (12,16);
+  font-weight: 500;
+  width: 100%;
+  background-color: $base-white;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.page-header--nav-open {
+  .site-nav {
+    display: flex;
+    z-index: 1;
+  }
+
+  .page-header__user-nav-toggle {
+    background-image: url("../../img/icon-menu-cross.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 12px;
+    height: 12px;
+
+    &:active {
+      background-color: $base-white;
+    }
+  }
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__link {
+  text-decoration: none;
+  display: flex;
+  margin-right: 27.53%;
+  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 9.2%;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-transform: none;
+    width: 23.24%;
+    justify-content: space-between;
+    margin-right: 11.91%;
+  }
+
+  span {
+    font-size: 0;
+
+    @media (min-width: $desktop-width) {
+      @include font(12,16);
+      font-weight: 400;
+      color: $base-black;
+    }
+  }
+}
+
+.page-header__user-nav {
+  display: flex;
+  width: 60%;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 16.48%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 19.22%;
+    justify-content: space-between;
+  }
+
+  a {
+    @include not-hover;
+    font-size: 0;
+    padding: 22px 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      fill: #333333;
+
+      @media (min-width: $desktop-width) {
+        margin-right: 8px;
+      }
+    }
+
+    &:active {
+      background-color: #f0ebff;
+    }
+
+    @media (min-width: $tablet-width) {
+      text-decoration: none;
+      height: 80px;
+      padding: 32px 22px;
+
+      &:active {
+        background-color: unset;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      @include font (12,16);
+      padding-right: 21px;
+      padding-left: 21px;
+
+      &:active {
+        background-color: #f0ebff;
+        color: $base-primary;
+
+        svg {
+          fill: $base-primary;
+        }
+      }
+
+      &:hover {
+        @include hover;
+        color: $base-primary;
+
+        svg {
+          @include hover;
+          fill: $base-primary;
+        }
+      }
+
+      &:focus {
+        background-color: $base-white;
+        color: $base-primary;
+
+        svg {
+          @include hover;
+          fill: $base-primary;
+        }
+      }
+    }
+  }
+}
+
+.page-header__user-nav-toggle {
+  @include button-reset;
+  background-image: url("../../img/icon-menu-burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 12px;
+  padding: 30px 30px;
+  display: flex;
+
+  &:active {
+    background-color: #f0ebff;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

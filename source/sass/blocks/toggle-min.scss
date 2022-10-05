@@ -1,0 +1,12 @@
+.toggle-min {
+  position: relative;
+
+  &::after {
+    @include pseudo-elem;
+    width: 211px;
+    height: 4px;
+    background-color: #9070ec;
+    left: 22px;
+    top: 8px;
+  }
+}

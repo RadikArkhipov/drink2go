@@ -1,0 +1,166 @@
+.advantages {
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-bottom: 120px;
+  }
+
+  h2 {
+    @include font (12,16);
+    color: $base-primary;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin: 0;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 4px;
+
+    @media (min-width: $desktop-width) {
+      padding-top: 100px;
+    }
+  }
+
+  h3 {
+    @include font (24,36);
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 36px;
+
+    @media (min-width: $tablet-width) {
+      @include font (42,64);
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.advantages__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  min-height: 664px;
+  justify-content: space-between;
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    flex-direction: row;
+    min-height: 0;
+    justify-content: unset;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 47.88%;
+    margin-right: 4.24%;
+    flex-direction: row;
+    align-items: flex-start;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(1) {
+      margin-bottom: 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: 2.21%;
+    }
+
+    &:nth-child(2n+1) {
+      width: 23.38%;
+    }
+
+    &:nth-child(2n) {
+      width: 23.31%;
+    }
+  }
+
+  svg {
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 20px 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.advantages__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    align-items: unset;
+    width: 78.76%;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+    width: 100%;
+  }
+
+  h4 {
+    @include font (18,32);
+    font-weight: 700;
+    margin: 0 0 4px 0;
+
+    @media (min-width: $tablet-width) {
+      @include font (24,36);
+      margin: 0 0 10px 0;
+    }
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      @include font (16,24);
+      text-align: left;
+    }
+
+    @media (min-width: $desktop-width) {
+      text-align: center;
+    }
+  }
+}

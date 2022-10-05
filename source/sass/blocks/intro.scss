@@ -1,0 +1,285 @@
+.intro__slider-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.intro__slider {
+  @include list-reset;
+  display: flex;
+}
+
+.intro__slide-flat {
+  flex-shrink: 0;
+  background-color: #f3ebe1;
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-image: url("../../img/flat-white-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center 20px;
+  background-size: 280px;
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url("../../img/flat-white-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 828px;
+    background-image: url("../../img/flat-white-tablet.png");
+    background-size: 476px;
+    background-position-y: 336px;
+    padding-right: 80px;
+    padding-left: 80px;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../../img/flat-white-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 714px;
+    background-image: url("../../img/flat-white-desktop.png");
+    background-size: 600px;
+    background-position: 100px 30px;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../../img/flat-white-desktop@2x.png");
+    }
+  }
+}
+
+.intro__slide-lavender {
+  flex-shrink: 0;
+  background-color: #eae6fc;
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-image: url("../../img/lavender-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center 20px;
+  background-size: 280px;
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url("../../img/lavender-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 828px;
+    background-image: url("../../img/lavender-tablet.png");
+    background-size: 476px;
+    background-position-y: 336px;
+    padding-right: 80px;
+    padding-left: 80px;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../../img/lavender-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 714px;
+    background-image: url("../../img/lavender-desktop.png");
+    background-size: 600px;
+    background-position: 100px 30px;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../../img/lavender-desktop@2x.png");
+    }
+  }
+}
+
+.intro__slide-espresso {
+  flex-shrink: 0;
+  background-color: #e5e6e8;
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-image: url("../../img/espresso-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center 20px;
+  background-size: 280px;
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url("../../img/espresso-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 828px;
+    background-image: url("../../img/espresso-tablet.png");
+    background-size: 476px;
+    background-position-y: 336px;
+    padding-right: 80px;
+    padding-left: 80px;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../../img/espresso-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 714px;
+    background-image: url("../../img/espresso-desktop.png");
+    background-size: 600px;
+    background-position: 100px 30px;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url("../../img/espresso-desktop@2x.png");
+    }
+  }
+}
+
+// .intro__slide {
+
+// }
+
+// .intro__slide-image {
+//   display: block;
+//   margin-top: 20px;
+//   margin-bottom: 10px;
+
+//   @media (min-width: $tablet-width) {
+//     width: 476px;
+//     height: 476px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     width: 600px;
+//     height: 600px;
+//   }
+// }
+
+.intro__product-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    width: 625px;
+    align-items: flex-start;
+    margin-left: 653px;
+    margin-top: 180px;
+  }
+
+  h2 {
+    @include font (12,16);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $base-primary;
+    margin: 0;
+    padding-top: 310px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 0;
+    }
+  }
+
+  h3 {
+    @include font (36,48);
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+
+    @media (min-width: $tablet-width) {
+      @include font (56,80);
+      margin-bottom: 16px;
+    }
+  }
+
+  p {
+    margin: 0 0 20px;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      @include font (20,32);
+    }
+
+    @media (min-width: $desktop-width) {
+      text-align: start;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.intro__product-price {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 64px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  span {
+    @include font (16,32);
+    color: $base-primary;
+    text-decoration: line-through;
+    margin-right: 6px;
+  }
+
+  p {
+    @include font (20,32);
+    font-weight: 600;
+    margin: 0 20px 0 0;
+  }
+}
+
+.intro__button {
+  @include font (16,24);
+  text-decoration: none;
+  padding: 8px 20px;
+}
+
+.intro__slider-btn {
+  position: absolute;
+  top: 60px;
+  background-color: transparent;
+  padding: 315px 5px 316px 4px;
+
+  @media (min-width: $tablet-width) {
+    padding: 308px 35px 307px 34px;
+    top: 80px;
+  }
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 345px;
+    padding-bottom: 344px;
+  }
+}
+
+.intro__slider-pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    width: 202px;
+    left: 625px;
+    display: flex;
+    justify-content: space-between;
+    bottom: 60px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 62px;
+  height: 4px;
+  background-color: $base-white;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $base-primary;
+}

@@ -1,0 +1,30 @@
+.button {
+  @include button-reset;
+  @include not-hover;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: $base-white;
+  background-color: $base-primary;
+  border-radius: 4px;
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      @include hover;
+      background-color: #9070ec;
+    }
+
+    &:focus {
+      @include hover;
+      background-color: #9070ec;
+    }
+
+    &:active {
+      background-color: #593cac;
+    }
+  }
+}

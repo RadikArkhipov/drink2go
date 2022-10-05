@@ -1,0 +1,8 @@
+.min-price {
+  padding: 0;
+  text-align: center;
+
+  &::placeholder {
+    color: #bdbdbd;
+  }
+}

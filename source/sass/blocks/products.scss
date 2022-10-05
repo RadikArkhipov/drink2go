@@ -1,0 +1,52 @@
+.products__list {
+  @include list-reset;
+  min-height: 2620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.products__item {
+  padding: 40px 20px 20px 20px;
+  background-color: $base-white;
+
+  a {
+    text-decoration: none;
+  }
+
+  h4 {
+    @include font (18,32);
+    font-weight: 700;
+    color: $base-black;
+    margin: 24px 0 4px 0;
+  }
+
+  p {
+    margin: 0 0 16px 0;
+  }
+}
+
+.products__item-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.products__item-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  b {
+    @include font (20,32);
+    font-weight: 600;
+  }
+}
+
+
+.products__item-button {
+  @include font (14,20);
+  padding: 8px 20px 8px 46px;
+  background-image: url("../../img/catalog-icon-basket.svg");
+  background-repeat: no-repeat;
+  background-position: left 20px center;
+}

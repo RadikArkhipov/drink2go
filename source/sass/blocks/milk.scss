@@ -1,0 +1,104 @@
+.milk__radio {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    position: relative;
+    margin-bottom: 23px;
+    margin-left: 35px;
+    display: inline-block;
+
+    &:nth-child(8) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      @include pseudo-elem;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #bdbdbd;
+      background-color: $base-white;
+      border-radius: 50%;
+      left: -34px;
+    }
+
+    &::after {
+      @include pseudo-elem;
+      width: 16px;
+      height: 16px;
+      background-color: $base-primary;
+      border-radius: 50%;
+      display: none;
+      top: 4px;
+      left: -30px;
+    }
+  }
+
+  input {
+    &:disabled:checked + label::after {
+      background-color: #e2e2e2;
+    }
+
+    &:disabled:checked + label::before {
+      border-color: #e2e2e2;
+      background-color: #f8f8f8;
+    }
+
+    &:disabled:checked + label {
+      color: $base-grey;
+    }
+
+    &:disabled + label::before {
+      border-color: #e2e2e2;
+      background-color: #f8f8f8;
+    }
+
+    &:disabled + label {
+      color: $base-grey;
+    }
+
+    &:checked + label::after {
+      display: block;
+    }
+
+    &:checked + label::before {
+      border-color: #7859cf;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include not-hover;
+
+      &:hover + label::before {
+        @include hover;
+        border-color: #9070ec;
+      }
+
+      &:hover + label::after {
+        @include hover;
+        display: block;
+        background-color: rgba(120, 89, 207, 0.25);
+      }
+
+      &:hover:checked + label::after {
+        @include hover;
+        background-color: rgba(120, 89, 207, 0.25);
+      }
+
+      &:focus + label::before {
+        @include hover;
+        border-color: #9070ec;
+      }
+
+      &:focus + label::after {
+        @include hover;
+        display: block;
+        background-color: rgba(120, 89, 207, 0.25);
+      }
+
+      &:focus:checked + label::after {
+        @include hover;
+        background-color: rgba(120, 89, 207, 0.25);
+      }
+    }
+  }
+}
