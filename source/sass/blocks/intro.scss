@@ -8,156 +8,111 @@
   display: flex;
 }
 
-.intro__slide-flat {
+.intro__slide {
   flex-shrink: 0;
-  background-color: #f3ebe1;
-  padding: 0 20px;
-  max-width: 1440px;
-  margin: 0 auto;
-  background-image: url("../../img/flat-white-mobile.png");
-  background-repeat: no-repeat;
-  background-position: center 20px;
-  background-size: 280px;
 
-  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url("../../img/flat-white-mobile@2x.png");
-  }
+  &--flat-white {
+    background-color: #f3ebe1;
 
-  @media (min-width: $tablet-width) {
-    min-height: 828px;
-    background-image: url("../../img/flat-white-tablet.png");
-    background-size: 476px;
-    background-position-y: 336px;
-    padding-right: 80px;
-    padding-left: 80px;
+    @media (min-width: $tablet-width) {
+      position: relative;
 
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url("../../img/flat-white-tablet@2x.png");
+      &::after {
+        @include pseudo-elem;
+        width: 1440px;
+        height: 188px;
+        background-color: $base-white;
+        bottom: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        position: static;
+
+        &::after {
+          display: none;
+        }
+      }
     }
   }
 
-  @media (min-width: $desktop-width) {
-    min-height: 714px;
-    background-image: url("../../img/flat-white-desktop.png");
-    background-size: 600px;
-    background-position: 100px 30px;
+  &--lavender {
+    background-color: #eae6fc;
+  }
 
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url("../../img/flat-white-desktop@2x.png");
-    }
+  &--espresso {
+    background-color: #e5e6e8;
   }
 }
 
-.intro__slide-lavender {
-  flex-shrink: 0;
-  background-color: #eae6fc;
-  padding: 0 20px;
-  max-width: 1440px;
-  margin: 0 auto;
-  background-image: url("../../img/lavender-mobile.png");
-  background-repeat: no-repeat;
-  background-position: center 20px;
-  background-size: 280px;
+.intro__slide-content {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url("../../img/lavender-mobile@2x.png");
+  picture {
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+
+      @media (min-width: $desktop-width) {
+        margin-left: 25px;
+      }
+    }
   }
 
   @media (min-width: $tablet-width) {
-    min-height: 828px;
-    background-image: url("../../img/lavender-tablet.png");
-    background-size: 476px;
-    background-position-y: 336px;
+    flex-direction: column-reverse;
     padding-right: 80px;
     padding-left: 80px;
-
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url("../../img/lavender-tablet@2x.png");
-    }
+    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 714px;
-    background-image: url("../../img/lavender-desktop.png");
-    background-size: 600px;
-    background-position: 100px 30px;
-
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url("../../img/lavender-desktop@2x.png");
-    }
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 84px;
   }
 }
 
-.intro__slide-espresso {
-  flex-shrink: 0;
-  background-color: #e5e6e8;
-  padding: 0 20px;
-  max-width: 1440px;
-  margin: 0 auto;
-  background-image: url("../../img/espresso-mobile.png");
-  background-repeat: no-repeat;
-  background-position: center 20px;
-  background-size: 280px;
-
-  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url("../../img/espresso-mobile@2x.png");
-  }
+.intro__slide-image {
+  display: block;
 
   @media (min-width: $tablet-width) {
-    min-height: 828px;
-    background-image: url("../../img/espresso-tablet.png");
-    background-size: 476px;
-    background-position-y: 336px;
-    padding-right: 80px;
-    padding-left: 80px;
-
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url("../../img/espresso-tablet@2x.png");
-    }
+    width: 476px;
+    height: 476px;
+    z-index: 1;
+    position: relative;
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 714px;
-    background-image: url("../../img/espresso-desktop.png");
-    background-size: 600px;
-    background-position: 100px 30px;
-
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url("../../img/espresso-desktop@2x.png");
-    }
+    width: 600px;
+    height: 600px;
+    z-index: 0;
+    position: static;
   }
 }
-
-// .intro__slide {
-
-// }
-
-// .intro__slide-image {
-//   display: block;
-//   margin-top: 20px;
-//   margin-bottom: 10px;
-
-//   @media (min-width: $tablet-width) {
-//     width: 476px;
-//     height: 476px;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     width: 600px;
-//     height: 600px;
-//   }
-// }
 
 .intro__product-description {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 625px;
     align-items: flex-start;
-    margin-left: 653px;
-    margin-top: 180px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 30px;
   }
 
   h2 {
@@ -165,16 +120,7 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $base-primary;
-    margin: 0;
-    padding-top: 310px;
-
-    @media (min-width: $tablet-width) {
-      padding-top: 60px;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding-top: 0;
-    }
+    margin: 0 0 4px 0;
   }
 
   h3 {
@@ -209,11 +155,6 @@
 .intro__product-price {
   display: flex;
   align-items: baseline;
-  margin-bottom: 64px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-  }
 
   span {
     @include font (16,32);
@@ -236,14 +177,14 @@
 }
 
 .intro__slider-btn {
+  @include not-hover;
   position: absolute;
-  top: 60px;
+  top: 0;
   background-color: transparent;
   padding: 315px 5px 316px 4px;
 
-  @media (min-width: $tablet-width) {
-    padding: 308px 35px 307px 34px;
-    top: 80px;
+  svg {
+    fill: #7859cf;
   }
 
   &--prev {
@@ -254,9 +195,27 @@
     right: 0;
   }
 
+  @media (min-width: $tablet-width) {
+    padding: 308px 35px 307px 34px;
+  }
+
   @media (min-width: $desktop-width) {
     padding-top: 345px;
     padding-bottom: 344px;
+
+    &:active {
+      background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+
+    &:hover {
+      @include hover;
+      background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:focus {
+      @include hover;
+      background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+    }
   }
 }
 
@@ -265,21 +224,44 @@
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    width: 202px;
-    left: 625px;
     display: flex;
-    justify-content: space-between;
     bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    span {
+      margin-right: 8px;
+
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+    }
   }
 }
 
 .swiper-pagination-bullet {
+  @include not-hover;
   width: 62px;
   height: 4px;
   background-color: $base-white;
-  cursor: pointer;
+
+  &:hover {
+    @include hover;
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:focus {
+    @include hover;
+    background-color: rgba(120, 89, 207, 0.25);
+  }
 }
 
 .swiper-pagination-bullet-active {
   background-color: $base-primary;
+}
+
+.swiper-button-disabled {
+  svg {
+    fill: #bdbdbd;
+  }
 }
