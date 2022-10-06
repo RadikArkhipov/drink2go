@@ -15,7 +15,7 @@
   color: $base-primary;
   appearance: unset;
   padding-left: 5px;
-  background-image: url("../../img/select-arrow-down.svg");
+  background-image: url("../img/select-arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-color: transparent;
@@ -33,7 +33,7 @@
 
   &:active {
     background-color: transparent;
-    background-image: url("../../img/select-arrow-up.svg");
+    background-image: url("../img/select-arrow-up.svg");
   }
 
   option {

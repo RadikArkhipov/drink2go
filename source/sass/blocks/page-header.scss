@@ -14,7 +14,7 @@
   }
 
   .page-header__user-nav-toggle {
-    background-image: url("../../img/icon-menu-cross.svg");
+    background-image: url("../img/icon-menu-cross.svg");
     background-repeat: no-repeat;
     background-position: center;
     width: 12px;
@@ -82,6 +82,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #333333;
 
     svg {
       fill: #333333;
@@ -144,7 +145,7 @@
 
 .page-header__user-nav-toggle {
   @include button-reset;
-  background-image: url("../../img/icon-menu-burger.svg");
+  background-image: url("../img/icon-menu-burger.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 16px;

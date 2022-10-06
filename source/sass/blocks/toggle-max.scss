@@ -1,12 +1,3 @@
 .toggle-max {
-  position: relative;
-
-  &::before {
-    @include pseudo-elem;
-    width: 20px;
-    height: 2px;
-    background-color: #e2e2e2;
-    left: 22px;
-    top: 9px;
-  }
+  left: 232px;
 }
