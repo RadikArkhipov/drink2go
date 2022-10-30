@@ -1,3 +1,11 @@
 .toggle-max {
   left: 232px;
+
+  @media (min-width: $tablet-width) {
+    left: 180px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 270px;
+  }
 }

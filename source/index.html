@@ -54,6 +54,12 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M41.7068 22.1225C42.4764 15.5574 43.2041 9.34979 48.9997 4C22.5072 3.99988 14.8468 12.128 10.9998 17.9999C2.45825 31.0373 10.0851 43.6704 11.7106 46.0864C10.7615 47.9699 9.8453 49.8228 8.96853 51.596C8.28756 52.9732 7.63037 54.3023 7 55.5603L7.88103 55.9999C8.51647 54.7318 9.17882 53.3919 9.86491 52.0041C10.713 50.2884 11.5975 48.4993 12.5122 46.6817C15.1065 47.5486 26.9646 50.8651 34.5 41.9999C40.1568 35.3449 40.9519 28.5617 41.7068 22.1225Z" fill="#F0EBFF"/>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M8.23221 41.055C12.1899 33.2582 16.686 25.0948 21.2668 19.9999L22 20.6562C17.4314 25.7376 12.9304 33.9532 8.96782 41.779C9.34578 41.9019 9.88834 42.0652 10.5614 42.2326C11.9567 42.5795 13.8987 42.9402 16.0898 43.0003C20.4744 43.1204 25.753 42.0406 29.7381 37.3522C35.1982 30.9285 35.9631 24.4063 36.7206 17.9463L36.7357 17.8172C37.4173 12.0063 38.12 6.18297 42.6108 1.02289C30.8214 1.2525 23.1299 3.18456 17.9438 5.69784C12.4434 8.36348 9.69156 11.7161 7.83626 14.5479C3.2831 21.4976 3.51823 28.3097 4.90266 33.4262C5.59642 35.9902 6.57807 38.1203 7.38638 39.6085C7.70612 40.1972 7.99777 40.6837 8.23221 41.055ZM7.7106 42.0864C6.08506 39.6704 -1.54175 27.0373 6.9998 13.9999C10.7758 8.23634 18.2259 0.299055 43.5524 0.00822987C44.0285 0.00276494 44.5109 -2.58931e-06 44.9997 1.81779e-09C44.6406 0.331444 44.301 0.666183 43.9796 1.0041C39.1138 6.12034 38.4287 11.9641 37.7068 18.1225C36.952 24.5617 36.1568 31.3449 30.5 37.9999C22.9646 46.8651 11.1065 43.5486 8.51217 42.6817C7.59746 44.4993 6.71305 46.2884 5.86491 48.0041C5.17882 49.3919 4.51647 50.7318 3.88103 51.9999L3 51.5603C3.63037 50.3023 4.28756 48.9732 4.96853 47.596C5.8453 45.8228 6.76149 43.9699 7.7106 42.0864Z" fill="#7859CF"/>
       </symbol>
+      <symbol width="6" height="10" viewBox="0 0 6 10" id="pagination-arrow-prev">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.80847 -5.20835e-08L6 1.23899L2.38306 5L6 8.76101L4.80847 10L-1.09891e-07 5L4.80847 -5.20835e-08Z" fill="#7859CF"/>
+      </symbol>
+      <symbol width="6" height="10" viewBox="0 0 6 10" id="pagination-arrow-next">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.19153 -5.20835e-08L5.41581e-08 1.23899L3.61694 5L3.82956e-07 8.76101L1.19153 10L6 5L1.19153 -5.20835e-08Z" fill="#7859CF"/>
+      </symbol>
     </svg>
   </div>
   <header class="page-header page-header--nav-nojs">
@@ -232,15 +238,15 @@
       </ul>
     </section>
     <section class="catalog">
+      <h2>Каталог</h2>
+      <h3>Каталог кофейных напитков</h3>
       <div class="container catalog__container">
-        <h2>Каталог</h2>
-        <h3>Каталог кофейных напитков</h3>
         <form class="catalog__filter" action="https://echo.htmlacademy.ru" method="post">
           <div class="catalog__filter-wrapper filter-group">
             <fieldset class="filter-group__price">
               <legend>Цена</legend>
               <div class="filter-group__price-toggles">
-                <button class="filter-group__price-toggle toggle-min" type="button">
+                <button class="filter-group__price-toggle toggle-min " type="button">
                   <span class="visually-hidden">Изменить минимальную цену</span>
                 </button>
                 <button class="filter-group__price-toggle toggle-max" type="button">
@@ -290,121 +296,131 @@
             </div>
           </div>
         </form>
-        <form class="catalog__sorting sorting" action="https://echo.htmlacademy.ru" method="post">
-          <label for="sorting">Сортировка:</label>
-          <select class="sorting__select-control" id="sorting" name="sorting">
-            <option value="default">по умолчанию</option>
-            <option value="expensive">сначала дорогие</option>
-            <option value="cheap">сначала дешёвые</option>
-            <option value="rating">высокий рейтинг</option>
-          </select>
-        </form>
-        <div class="catalog__products products">
-          <ul class="products__list">
-            <li class="products__item">
-              <a href="#">
-                <picture>
-                  <source type="image/webp" srcset="img/catalog-coffee-can-1.webp, img/catalog-coffee-can-1@2x.webp 2x">
-                  <img class="products__item-image" src="img/catalog-coffee-can-1.png" src="img/catalog-coffee-can-1@2x.png 2x" width="130" height="188" alt="Изображение банки для кофе">
-                </picture>
-                <h4>Декаф Флэт Уайт</h4>
-              </a>
-              <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <div class="products__item-price">
-                <b>225₽</b>
-                <button class="button products__item-button">В корзину</button>
-              </div>
-            </li>
-            <li class="products__item">
-              <a href="#">
-                <picture>
-                  <source type="image/webp" srcset="img/catalog-coffee-can-2.webp, img/catalog-coffee-can-2@2x.webp 2x">
-                  <img class="products__item-image" src="img/catalog-coffee-can-2.png" src="img/catalog-coffee-can-2@2x.png 2x" width="130" height="188" alt="Изображение банки для кофе">
-                </picture>
-                <h4>Декаф Флэт Уайт</h4>
-              </a>
-              <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <div class="products__item-price">
-                <b>225₽</b>
-                <button class="button products__item-button">В корзину</button>
-              </div>
-            </li>
-            <li class="products__item">
-              <a href="#">
-                <picture>
-                  <source type="image/webp" srcset="img/catalog-coffee-can-3.webp, img/catalog-coffee-can-3@2x.webp 2x">
-                  <img class="products__item-image" src="img/catalog-coffee-can-3.png" src="img/catalog-coffee-can-3@2x.png 2x" width="130" height="188" alt="Изображение банки для кофе">
-                </picture>
-                <h4>Декаф Флэт Уайт</h4>
-              </a>
-              <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <div class="products__item-price">
-                <b>225₽</b>
-                <button class="button products__item-button">В корзину</button>
-              </div>
-            </li>
-            <li class="products__item">
-              <a href="#">
-                <picture>
-                  <source type="image/webp" srcset="img/catalog-coffee-can-4.webp, img/catalog-coffee-can-4@2x.webp 2x">
-                  <img class="products__item-image" src="img/catalog-coffee-can-4.png" src="img/catalog-coffee-can-4@2x.png 2x" width="130" height="188" alt="Изображение банки для кофе">
-                </picture>
-                <h4>Декаф Флэт Уайт</h4>
-              </a>
-              <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <div class="products__item-price">
-                <b>225 ₽</b>
-                <button class="button products__item-button">В корзину</button>
-              </div>
-            </li>
-            <li class="products__item">
-              <a href="#">
-                <picture>
-                  <source type="image/webp" srcset="img/catalog-coffee-can-5.webp, img/catalog-coffee-can-5@2x.webp 2x">
-                  <img class="products__item-image" src="img/catalog-coffee-can-5.png" src="img/catalog-coffee-can-5@2x.png 2x" width="130" height="188" alt="Изображение банки для кофе">
-                </picture>
-                <h4>Декаф Флэт Уайт</h4>
-              </a>
-              <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <div class="products__item-price">
-                <b>225₽</b>
-                <button class="button products__item-button">В корзину</button>
-              </div>
-            </li>
-            <li class="products__item">
-              <a href="#">
-                <picture>
-                  <source type="image/webp" srcset="img/catalog-coffee-can-6.webp, img/catalog-coffee-can-6@2x.webp 2x">
-                  <img class="products__item-image" src="img/catalog-coffee-can-6.png" src="img/catalog-coffee-can-6@2x.png 2x" width="130" height="188" alt="Изображение банки для кофе">
-                </picture>
-                <h4>Декаф Флэт Уайт</h4>
-              </a>
-              <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-              <div class="products__item-price">
-                <b>225₽</b>
-                <button class="button products__item-button">В корзину</button>
-              </div>
-            </li>
-          </ul>
+        <div class="catalog__wrapper">
+          <form class="catalog__sorting sorting" action="https://echo.htmlacademy.ru" method="post">
+            <label for="sorting">Сортировка:</label>
+            <select class="sorting__select-control" id="sorting" name="sorting">
+              <option value="default">по умолчанию</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="cheap">сначала дешёвые</option>
+              <option value="rating">высокий рейтинг</option>
+            </select>
+          </form>
+          <div class="catalog__products products">
+            <ul class="products__list">
+              <li class="products__item">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/catalog-coffee-can-1.webp, img/catalog-coffee-can-1@2x.webp 2x">
+                    <img class="products__item-image" src="img/catalog-coffee-can-1.png" src="img/catalog-coffee-can-1@2x.png 2x" width="130" height="188" alt="Изображение банки для кофе">
+                  </picture>
+                  <h4>Декаф Флэт Уайт</h4>
+                </a>
+                <p>Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком</p>
+                <div class="products__item-price">
+                  <b>225₽</b>
+                  <button class="button products__item-button">В корзину</button>
+                </div>
+              </li>
+              <li class="products__item">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/catalog-coffee-can-2.webp, img/catalog-coffee-can-2@2x.webp 2x">
+                    <img class="products__item-image" src="img/catalog-coffee-can-2.png" src="img/catalog-coffee-can-2@2x.png 2x" width="130" height="188" alt="Изображение банки для кофе">
+                  </picture>
+                  <h4>Декаф Флэт Уайт</h4>
+                </a>
+                <p>Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком</p>
+                <div class="products__item-price">
+                  <b>225₽</b>
+                  <button class="button products__item-button">В корзину</button>
+                </div>
+              </li>
+              <li class="products__item">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/catalog-coffee-can-3.webp, img/catalog-coffee-can-3@2x.webp 2x">
+                    <img class="products__item-image" src="img/catalog-coffee-can-3.png" src="img/catalog-coffee-can-3@2x.png 2x" width="130" height="188" alt="Изображение банки для кофе">
+                  </picture>
+                  <h4>Декаф Флэт Уайт</h4>
+                </a>
+                <p>Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком</p>
+                <div class="products__item-price">
+                  <b>225₽</b>
+                  <button class="button products__item-button">В корзину</button>
+                </div>
+              </li>
+              <li class="products__item">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/catalog-coffee-can-4.webp, img/catalog-coffee-can-4@2x.webp 2x">
+                    <img class="products__item-image" src="img/catalog-coffee-can-4.png" src="img/catalog-coffee-can-4@2x.png 2x" width="130" height="188" alt="Изображение банки для кофе">
+                  </picture>
+                  <h4>Декаф Флэт Уайт</h4>
+                </a>
+                <p>Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком</p>
+                <div class="products__item-price">
+                  <b>225 ₽</b>
+                  <button class="button products__item-button">В корзину</button>
+                </div>
+              </li>
+              <li class="products__item">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/catalog-coffee-can-5.webp, img/catalog-coffee-can-5@2x.webp 2x">
+                    <img class="products__item-image" src="img/catalog-coffee-can-5.png" src="img/catalog-coffee-can-5@2x.png 2x" width="130" height="188" alt="Изображение банки для кофе">
+                  </picture>
+                  <h4>Декаф Флэт Уайт</h4>
+                </a>
+                <p>Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком</p>
+                <div class="products__item-price">
+                  <b>225₽</b>
+                  <button class="button products__item-button">В корзину</button>
+                </div>
+              </li>
+              <li class="products__item">
+                <a href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/catalog-coffee-can-6.webp, img/catalog-coffee-can-6@2x.webp 2x">
+                    <img class="products__item-image" src="img/catalog-coffee-can-6.png" src="img/catalog-coffee-can-6@2x.png 2x" width="130" height="188" alt="Изображение банки для кофе">
+                  </picture>
+                  <h4>Декаф Флэт Уайт</h4>
+                </a>
+                <p>Кофе без кофеина из Эфиопии <br> с натуральным фермерским молоком</p>
+                <div class="products__item-price">
+                  <b>225₽</b>
+                  <button class="button products__item-button">В корзину</button>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ol class="catalog__pagination pagination">
-          <li class="pagination__item-prev">
-            <a href="#"></a>
-          </li>
-          <li class="pagination__item">
-            <a href="#">1</a>
-          </li>
-          <li class="pagination__item">
-            <a>2</a>
-          </li>
-          <li class="pagination__item">
-            <a href="#">3</a>
-          </li>
-          <li class="pagination-item-next">
-            <a href="#"></a>
-          </li>
-        </ol>
       </div>
+      <ol class="container catalog__pagination pagination">
+        <li class="pagination__item pagination__item--prev">
+          <a href="#">Назад
+            <svg width="6" height="10">
+              <use href="#pagination-arrow-prev"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a href="#">1</a>
+        </li>
+        <li class="pagination__item pagination__item--current">
+          <a>2</a>
+        </li>
+        <li class="pagination__item">
+          <a href="#">3</a>
+        </li>
+        <li class="pagination__item pagination__item--next">
+          <a href="#">Вперёд
+            <svg width="6" height="10">
+              <use href="#pagination-arrow-next"></use>
+            </svg>
+          </a>
+        </li>
+      </ol>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Месторасположение на карте</h2>

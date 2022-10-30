@@ -71,7 +71,8 @@
       @include not-hover;
 
       &:hover + label::before {
-        @include hover;
+        outline: 0;
+        cursor: pointer;
         border: 2px solid #9070ec;
         background-color: rgba(144, 112, 236, 0.25);
       }
@@ -82,23 +83,21 @@
       }
 
       &:hover:checked + label::after {
-        @include hover;
         left: -53px;
       }
 
       &:focus + label::before {
-        @include hover;
+        outline: 0;
+        cursor: pointer;
         border: 2px solid #9070ec;
         background-color: rgba(144, 112, 236, 0.25);
       }
 
       &:focus + label::after {
-        @include hover;
         background-color: $base-white;
       }
 
       &:focus:checked + label::after {
-        @include hover;
         left: -53px;
       }
     }

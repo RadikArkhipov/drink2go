@@ -2,22 +2,27 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
 }
 
 .sorting__select-control {
   @include not-hover;
+  @include font (16,24);
   font-weight: 600;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   border: 0;
-  width: 134px;
+  width: 165px;
   height: 32px;
   color: $base-primary;
   appearance: unset;
-  padding-left: 5px;
+  padding: 4px 21px 4px 10px;
   background-image: url("../img/select-arrow-down.svg");
   background-repeat: no-repeat;
-  background-position: right 10px center;
+  background-position: right 7px center;
   background-color: transparent;
   border-radius: 4px;
 
@@ -37,7 +42,6 @@
   }
 
   option {
-    @include font (16,24);
     font-weight: 400;
     font-family: "Montserrat", "Arial", sans-serif;
     font-style: normal;
