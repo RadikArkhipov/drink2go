@@ -37,10 +37,50 @@
 
   &--lavender {
     background-color: #eae6fc;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+
+      &::after {
+        @include pseudo-elem;
+        width: 1440px;
+        height: 188px;
+        background-color: $base-white;
+        bottom: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        position: static;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
   }
 
   &--espresso {
     background-color: #e5e6e8;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+
+      &::after {
+        @include pseudo-elem;
+        width: 1440px;
+        height: 188px;
+        background-color: $base-white;
+        bottom: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        position: static;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
   }
 }
 

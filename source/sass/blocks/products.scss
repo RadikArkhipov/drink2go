@@ -16,6 +16,7 @@
 .products__item {
   padding: 40px 20px 20px 20px;
   background-color: $base-white;
+  border-radius: 4px;
 
   @media (min-width: $tablet-width) {
     width: 47.9%;
@@ -33,8 +34,19 @@
   }
 
   @media (min-width: $desktop-width) {
+    @include hover;
     width: 31.3%;
     margin-right: 2.9%;
+
+    &:hover {
+      @include not-hover;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus {
+      @include not-hover;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
 
     &:nth-child(3) {
       margin-right: 0;
@@ -91,7 +103,7 @@
 .products__item-button {
   @include font (14,20);
   padding: 8px 20px 8px 46px;
-  background-image: url("../../img/catalog-icon-basket.svg");
+  background-image: url("../img/catalog-icon-basket.svg");
   background-repeat: no-repeat;
   background-position: left 20px center;
 }

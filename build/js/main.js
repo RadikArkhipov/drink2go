@@ -30,3 +30,17 @@ if (introSliderContainer) {
   })
 }
 
+const map = L.map('map', {scrollWheelZoom:false}).setView([59.968137, 30.316272], 18,5);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 22,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+const iconMapPin = L.icon ({
+  iconUrl: 'img/icon-map-pin.svg',
+  iconSize: [38, 50],
+});
+
+const marker = L.marker([59.968137, 30.316272], {icon: iconMapPin}).addTo(map);
+marker.bindPopup("Санкт-Петербург, набережная реки Карповки, дом 5").addTo(map);
