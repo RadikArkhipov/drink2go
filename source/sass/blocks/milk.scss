@@ -5,7 +5,7 @@
   label {
     position: relative;
     margin-bottom: 23px;
-    margin-left: 35px;
+    padding-left: 35px;
     display: inline-block;
 
     &:nth-child(8) {
@@ -19,7 +19,7 @@
       border: 2px solid #bdbdbd;
       background-color: $base-white;
       border-radius: 50%;
-      left: -34px;
+      left: 0;
     }
 
     &::after {
@@ -30,7 +30,7 @@
       border-radius: 50%;
       display: none;
       top: 4px;
-      left: -30px;
+      left: 4px;
     }
   }
 
@@ -79,10 +79,15 @@
         background-color: rgba(120, 89, 207, 0.25);
       }
 
-      &:hover:checked + label::after {
-        @include hover;
-        background-color: rgba(120, 89, 207, 0.25);
-      }
+      // &:hover:checked + label::after {
+      //   @include hover;
+      //   background-color: rgba(120, 89, 207, 0.25);
+      // }
+
+      // &:hover:checked + label::before {
+      //   @include hover;
+      //   border-color: #9070ec;
+      // }
 
       &:focus + label::before {
         @include hover;
@@ -95,9 +100,24 @@
         background-color: rgba(120, 89, 207, 0.25);
       }
 
-      &:focus:checked + label::after {
+      // &:focus:checked + label::after {
+      //   @include hover;
+      //   background-color: rgba(120, 89, 207, 0.25);
+      // }
+
+      // &:focus:checked + label::before {
+      //   @include hover;
+      //   border-color: #9070ec;
+      // }
+
+      &:checked + label::after {
         @include hover;
-        background-color: rgba(120, 89, 207, 0.25);
+        background-color: #7859cf;
+      }
+
+      &:checked + label::before {
+        @include hover;
+        border-color: #7859cf;
       }
     }
   }

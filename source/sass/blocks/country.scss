@@ -5,7 +5,7 @@
   label {
     position: relative;
     margin-bottom: 20px;
-    margin-left: 55px;
+    padding-left: 55px;
     display: inline-block;
 
     &:nth-child(10) {
@@ -18,7 +18,7 @@
       height: 24px;
       background-color: #bdbdbd;
       border-radius: 12px;
-      left: -55px;
+      left: 0;
     }
 
     &::after {
@@ -28,14 +28,14 @@
       background-color: $base-white;
       border-radius: 50%;
       top: 2px;
-      left: -53px;
+      left: 2px;
     }
   }
 
   input {
     &:disabled:checked + label::after {
       background-color: #bdbdbd;
-      left: -35px;
+      left: 2px;
     }
 
     &:disabled:checked + label::before {
@@ -60,7 +60,7 @@
 
     &:checked + label::after {
       display: block;
-      left: -35px;
+      left: 20px;
     }
 
     &:checked + label::before {
@@ -82,9 +82,9 @@
         background-color: $base-white;
       }
 
-      &:hover:checked + label::after {
-        left: -53px;
-      }
+      // &:hover:checked + label::before {
+      //   border: 2px solid $base-primary;
+      // }
 
       &:focus + label::before {
         outline: 0;
@@ -97,8 +97,16 @@
         background-color: $base-white;
       }
 
-      &:focus:checked + label::after {
-        left: -53px;
+      // &:focus:checked + label::before {
+      //   border: 2px solid $base-primary;
+      // }
+
+      &:checked + label::after {
+        left: 2px;
+      }
+
+      &:checked + label::before {
+        background-color: $base-primary;
       }
     }
   }
